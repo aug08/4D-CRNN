@@ -60,7 +60,7 @@ for nb in range(15):
 
         def create_base_network(input_dim):
             seq = Sequential()
-            seq.add(Conv2D(64, 5, activation='relu', padding='same', name='conv1'))
+            seq.add(Conv2D(64, 5, activation='relu', padding='same', name='conv1', input_shape=input_dim))
             seq.add(Conv2D(128, 4, activation='relu', padding='same', name='conv2'))
             seq.add(Conv2D(256, 4, activation='relu', padding='same', name='conv3'))
             seq.add(Conv2D(64, 1, activation='relu', padding='same', name='conv4'))
